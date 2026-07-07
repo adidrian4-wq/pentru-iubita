@@ -1,77 +1,11 @@
-*{
-box-sizing:border-box;
-}
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#ffd1e6;
-text-align:center;
-}
+const loveBtn = document.getElementById("loveBtn");
+const music = document.getElementById("music");
 
 
-.hero{
-padding:60px 20px;
-}
+loveBtn.addEventListener("click", function(){
 
+    music.play();
 
-h1{
-color:#ff2f7d;
-}
+    alert("Te iubesc, Gurița mea ❤️");
 
-
-button{
-
-padding:15px 40px;
-border:none;
-border-radius:40px;
-background:white;
-color:#ff2f7d;
-font-size:18px;
-cursor:pointer;
-position:relative;
-z-index:10;
-
-}
-
-
-button:hover{
-transform:scale(1.05);
-}
-
-
-.gallery img{
-
-width:250px;
-height:250px;
-object-fit:cover;
-border-radius:20px;
-margin:10px;
-
-}
-
-
-.message{
-
-background:white;
-margin:30px;
-padding:20px;
-border-radius:20px;
-
-}
-
-
-.music iframe{
-
-width:560px;
-height:315px;
-max-width:90%;
-
-}
-
-
-footer{
-
-padding:20px;
-
-}
+});
