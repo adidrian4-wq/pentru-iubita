@@ -1,66 +1,77 @@
-const messages=[
+*{
+box-sizing:border-box;
+}
 
-"Te iubesc infinit ❤️",
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#ffd1e6;
+text-align:center;
+}
 
-"Zâmbetul tău îmi face ziua mai frumoasă ☀️",
 
-"Ești locul în care mă simt acasă 🤍",
+.hero{
+padding:60px 20px;
+}
 
-"Îți mulțumesc că exiști ❤️",
 
-"Fiecare zi alături de tine este un cadou 🎁",
+h1{
+color:#ff2f7d;
+}
 
-"Ești cea mai frumoasă poveste din viața mea 💖",
 
-"Pentru mine vei fi mereu Gurița mea ❤️"
+button{
 
-];
-
-const button=document.getElementById("loveBtn");
-const text=document.getElementById("loveMessage");
-
-button.onclick=()=>{
-
-const random=Math.floor(Math.random()*messages.length);
-
-text.innerHTML=messages[random];
-
-for(let i=0;i<40;i++){
-
-createHeart();
+padding:15px 40px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff2f7d;
+font-size:18px;
+cursor:pointer;
+position:relative;
+z-index:10;
 
 }
 
-};
 
-function createHeart(){
+button:hover{
+transform:scale(1.05);
+}
 
-const heart=document.createElement("div");
 
-heart.className="heart";
+.gallery img{
 
-heart.innerHTML="❤";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.bottom="-20px";
-
-heart.style.fontSize=(15+Math.random()*30)+"px";
-
-heart.style.animationDuration=(3+Math.random()*4)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-
-heart.remove();
-
-},7000);
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+margin:10px;
 
 }
 
-setInterval(()=>{
 
-createHeart();
+.message{
 
-},500);
+background:white;
+margin:30px;
+padding:20px;
+border-radius:20px;
+
+}
+
+
+.music iframe{
+
+width:560px;
+height:315px;
+max-width:90%;
+
+}
+
+
+footer{
+
+padding:20px;
+
+}
